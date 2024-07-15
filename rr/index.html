@@ -32,14 +32,156 @@
     <link rel="stylesheet" href="assets/css/owl-carousel.css" />
 
     <link rel="stylesheet" href="assets/css/lightbox.css" />
-
     <style>
+      .navbar-nav {
+        margin: 0 auto;
+      }
+      .dropdown:hover>.dropdown-menu {
+        display: block;
+      }
+      .dropdown-submenu {
+        position: relative;
+      }
+      .dropdown-submenu>.dropdown-menu {
+        top: 0;
+        left: 100%;
+        margin-top: -1px;
+      }
+      .dropdown-submenu:hover>.dropdown-menu {
+        display: block;
+      }
+      
+      @media (max-width: 576px) {
+        .main-banner, .section, #explore, body, #social  {
+          padding: 0;
+        }
+      }
+    </style>
+
+    <!-- <style>
       .nav-item .dropdown-menu .dropdown-menu {
         position: absolute;
         left: 100%; /* Position to the right of the parent menu */
         top: 0;
       }
-    </style>
+      .menu-trigger span {
+        display: block;
+        width: 33px;
+        height: 4px;
+        margin-bottom: 5px;
+        position: relative;
+        background: #333; /* Change color as needed */
+        border-radius: 3px;
+        z-index: 1001;
+        transform-origin: 4px 0px;
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+          background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+      }
+
+      .menu-trigger span:first-child {
+        transform-origin: 0% 0%;
+      }
+
+      .menu-trigger span:nth-last-child(2) {
+        transform-origin: 0% 100%;
+      }
+      .menu-trigger {
+  display: none;
+}
+.show {
+  display: block !important;
+}
+/* Hide the traditional navigation menu in mobile view */
+@media (max-width: 768px) {
+  .header .container {
+    text-align: center; /* Center the logo and menu trigger */
+  }
+
+  .navbar {
+    justify-content: center; /* Center the navbar container */
+  }
+
+  .navbar-collapse {
+    text-align: center; /* Center the collapsed menu content */
+  }
+
+  .navbar-nav {
+    display: flex;
+    flex-direction: column; /* Stack the nav items vertically */
+    align-items: center; /* Center-align the nav items */
+    width: 100%;
+  }
+
+  .nav-item {
+    width: 100%;
+    font-size: larger;
+    
+    /* Make nav items full width */
+  }
+
+  .nav-link {
+    text-align: center; /* Center-align the text of nav links */
+  }
+  .navbar-collapse {
+    display: none;
+    position: fixed;
+    
+    top: 80px; 
+    left: 0;
+    right: 0;
+    z-index: 1002; /* Ensure it's above other content */
+    background-color: #fff; /* Background color */
+  }
+
+  /* Show the hamburger icon in mobile view */
+  .menu-trigger {
+    display: block;
+  }
+}
+.dropdown-menu .dropdown-toggle:after {
+  /* Add dropdown arrow for items that have nested dropdown */
+  content: '▼';
+  float: right;
+}
+
+.dropdown-menu .dropdown-menu {
+  /* Position the second level dropdown to the right */
+  margin-left: 100%; top: 0;
+  display: none; /* Hide by default */
+}
+
+/* Show the nested dropdown on hover or on click */
+.dropdown-menu .dropdown:hover > .dropdown-menu {
+  display: block;
+}
+
+/* Adjustments for mobile view */
+@media (max-width: 768px) {
+  .dropdown-menu .dropdown-menu {
+    /* Position the nested dropdowns below their parent item for mobile */
+    position: static;
+    margin-left: 0;
+  }
+}
+
+.navbar-nav {
+      margin: 0 auto;
+    }
+    .dropdown:hover>.dropdown-menu {
+      display: block;
+    }
+    .dropdown-submenu {
+      position: relative;
+    }
+    .dropdown-submenu>.dropdown-menu {
+      top: 0;
+      left: 100%;
+      margin-top: -1px;
+    }
+    .dropdown-submenu:hover>.dropdown-menu {
+      display: block;
+    }
+    </style> -->
     <link rel="stylesheet" href="assets/css/lightbox.css" />
     <!--
 
@@ -63,161 +205,75 @@ https://templatemo.com/tm-571-hexashop
 
     <!-- ** Header Area Start ** -->
     <!-- flex d-flex justify-content-end mx-auto my-2 gap-12 px-12  -->
-    <header class="header header-sticky flex d-flex mx-auto " style="background-color: white;   z-index: 1000;">
+    <header
+      class="header header-sticky flex d-flex mx-auto"
+      style="background-color: white; z-index: 1000"
+    >
       <div class="container flex d-flex justify-content-center mx-auto mt-2">
         <div class="navbar flex-shrink-1">
           <!-- Logo -->
-          <a href="index.html" class="logo">
+          <!-- <a href="index.html" class="logo">
             <img
               src="assets/images/logo-no-background.png"
               alt="ARKOM Leather LLP"
               height="60"
             />
-          </a>
+          </a> -->
           <!-- Hamburger menu icon -->
-          <div class="menu-trigger">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
         </div>
-        <!-- Navigation Links -->
-        <nav
-          class="navbar navbar-expand-lg navbar-light bg-light flex d-flex justify-content-end w-100"
-        >
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="index.html"
-                  >Home <span class="sr-only">(current)</span></a
-                >
-              </li>
-              <!-- <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li> -->
-              <li class="nav-item">
-                <a class="nav-link" href="about.html">About Us</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="Product.html"
-                  id="navbarDropdown"
-                  role="button"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  Products
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a
-                    class="dropdown-item dropdown-toggle"
-                    href="#"
-                    id="nestedDropdown1"
-                    role="button"
-                    data-toggle="dropdown"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                  >
-                    Synthetic Leather
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="nestedDropdown1">
-                    <a class="dropdown-item" href="Product.html"
-                      >AutoMajestive PVC Leather</a
-                    >
-                    <a class="dropdown-item" href="UrbanePVCLeather.html">
-                      Urbane PVC Leather</a
-                    >
-                    <a class="dropdown-item" href="StylewalkPVCLeather.html"
-                      >Stylewalk PVC Leather</a
-                    >
-                    <a class="dropdown-item" href="IndulgePVCLeather.html"
-                      >Indulge PVC Leather</a
-                    >
-                    <a class="dropdown-item" href="ManiaPVCLeather.html"
-                      >Mania PVC Leather</a
-                    >
-                    <a class="dropdown-item" href="DazzlePVCLeather.html"
-                      >Dazzle PVC Leather</a
-                    >
-                  </div>
-                  <div class="dropdown-divider"></div>
-                  <a
-                    class="dropdown-item dropdown-toggle"
-                    href="#"
-                    id="nestedDropdown2"
-                    role="button"
-                    data-toggle="dropdown"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                  >
-                    Technical Coated Textile
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="nestedDropdown2">
-                    <a class="dropdown-item" href="SingleSideCoatedTextiles.html"
-                      >Single Side Coated Textiles
-                    </a>
-                  </div>
-                  <div class="dropdown-divider"></div>
-                  <a
-                    class="dropdown-item dropdown-toggle"
-                    href="#"
-                    id="nestedDropdown2"
-                    role="button"
-                    data-toggle="dropdown"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                  >
-                    PVC Films
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="nestedDropdown2">
-                    <a class="dropdown-item" href="OpaquePVCFlexibleFilms.html">Opaque PVC Flexible </a>
-                    <a class="dropdown-item" href="SemiTransparentPVCFlexibleSheet.html"
-                      >Semi-Transparent PVC Flexible Sheet
-                    </a>
-                  </div>
-                  <div class="dropdown-divider"></div>
-                  <a
-                    class="dropdown-item "
-                    href="PVCFlooringsForResidential.html"
-                  
-                  >
-                    PVC Floorings
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="nestedDropdown2">
-                    <!-- <a class="dropdown-item" href="#">Submenu 2 Item 1</a>
-                            <a class="dropdown-item" href="#">Submenu 2 Item 2</a> -->
+
+        <!-- Navigation Links -->     
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">ARKOM LEATHER</a>
+        <!-- <img src="assets/images/ARKOM_transparent.png" alt="logo"> -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                Product
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="Product.html">Synthetic Leather</a>
+                <a class="dropdown-item" href="#">Technical Coated Textile</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">PVC Films</a>
+                <div class="dropdown-submenu">
+                  <a class="dropdown-item dropdown-toggle" href="#">PVC Flooring</a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Leather 1 </a>
+                    <a class="dropdown-item" href="#">Leather 2</a>
+                    <div class="dropdown-submenu">
+                      <a class="dropdown-item dropdown-toggle" href="#">Leather 3</a>
+                      <!-- <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Submenu Action 1</a>
+                        <a class="dropdown-item" href="#">Submenu Action 2</a>
+                      </div> -->
+                    </div>
                   </div>
                 </div>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="quality.html">Quality & R&D</a>
-              </li>
-
-              <!-- <li class="nav-item"><a class="nav-link" href="#kids">Applications</a></li> -->
-              <li class="nav-item">
-                <a class="nav-link" href="csr.html">CSR</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="inspection.html">inspection </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact Us</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-        <!-- <nav class="nav">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="Product.html">Products</a></li>
-                    <li><a href="#women">Quality & R&D</a></li>
-                    <li><a href="#kids">Applications</a></li>
-                    <li><a href="#csr">CSR</a></li>
-                    <li><a href="#contact">Contact Us</a></li>
-                </ul>
-            </nav> -->
-      </div>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="quality.html">Quality & R&D</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="inspection.html">Inspection</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </header>
 
     <!-- ** Header Area End ** -->
@@ -581,9 +637,17 @@ https://templatemo.com/tm-571-hexashop
                   <li>
                     Work Hours:<br /><span>07:30 AM - 9:30 PM Daily</span>
                   </li>
-                  <li><a href="mailto:INFO@ARKOMLEATHER.COM">INFO@ARKOMLEATHER.COM</a></li>
-                  <li><a href="mailto:arkomleather@gmail.com">arkomleather@gmail.com</a></li>
-                 
+                  <li>
+                    <a href="mailto:INFO@ARKOMLEATHER.COM"
+                      >INFO@ARKOMLEATHER.COM</a
+                    >
+                  </li>
+                  <li>
+                    <a href="mailto:arkomleather@gmail.com"
+                      >arkomleather@gmail.com</a
+                    >
+                  </li>
+
                   <li>
                     Social Media:<br /><span
                       ><a href="#">Facebook</a>, <a href="#">Instagram</a>,
@@ -607,11 +671,11 @@ https://templatemo.com/tm-571-hexashop
             <div class="first-item">
               <div class="logo">
                 <img
-                src="assets/images/logo-no-background.png"
-                alt="ARKOM Leather LLP"
-                height="60"
-                width="270"
-              />
+                  src="assets/images/logo-no-background.png"
+                  alt="ARKOM Leather LLP"
+                  height="60"
+                  width="270"
+                />
               </div>
               <ul>
                 <li>
@@ -620,8 +684,16 @@ https://templatemo.com/tm-571-hexashop
                     States</a
                   >
                 </li>
-                <li><a href="mailto:INFO@ARKOMLEATHER.COM">INFO@ARKOMLEATHER.COM</a></li>
-                <li><a href="mailto:arkomleather@gmail.com">arkomleather@gmail.com</a></li>
+                <li>
+                  <a href="mailto:INFO@ARKOMLEATHER.COM"
+                    >INFO@ARKOMLEATHER.COM</a
+                  >
+                </li>
+                <li>
+                  <a href="mailto:arkomleather@gmail.com"
+                    >arkomleather@gmail.com</a
+                  >
+                </li>
                 <li><a href="tel:+919909024124">+91 9909024124</a></li>
                 <li><a href="tel:+919712369698">+91 9712369698</a></li>
               </ul>
@@ -646,21 +718,28 @@ https://templatemo.com/tm-571-hexashop
             </ul>
           </div>
           <div class="col-lg-3">
-            <h4> &amp; Our Products</h4>
+            <h4>&amp; Our Products</h4>
             <ul>
               <li><a href="UrbanePVCLeather.html">Urbane PVC</a></li>
               <li><a href="IndulgePVCLeather.html">IndulgePVCLeather</a></li>
               <li><a href="ManiaPVCLeather.html">ManiaPVCLeather</a></li>
-              <li><a href="StylewalkPVCLeather.html">Stylewalk PVC Leather</a></li>
-              <li><a href="PVCFlooringsForResidential.html">PVC Floorings For Residential</a></li>
+              <li>
+                <a href="StylewalkPVCLeather.html">Stylewalk PVC Leather</a>
+              </li>
+              <li>
+                <a href="PVCFlooringsForResidential.html"
+                  >PVC Floorings For Residential</a
+                >
+              </li>
             </ul>
           </div>
           <div class="col-lg-12">
             <div class="under-footer">
               <p>
-                Copyright © 2024 @Foremost Infosystem Pvt Ltd All Rights Reserved.
+                Copyright © 2024 @Foremost Infosystem Pvt Ltd All Rights
+                Reserved.
 
-                  <!-- <br />Design:
+                <!-- <br />Design:
                   <a
                     href="https://templatemo.com"
                     target="_parent"
@@ -710,7 +789,15 @@ https://templatemo.com/tm-571-hexashop
     <!-- Global Init -->
     <script src="assets/js/custom.js"></script>
 
-    <script>
+    <!-- <script>
+ document.addEventListener('DOMContentLoaded', function () {
+  var menuTrigger = document.querySelector('.menu-trigger');
+  var navbarCollapse = document.querySelector('.navbar-collapse');
+
+  menuTrigger.addEventListener('click', function () {
+    navbarCollapse.classList.toggle('show');
+  });
+});
       $(function () {
         var selectedClass = "";
         $("p").click(function () {
@@ -725,6 +812,6 @@ https://templatemo.com/tm-571-hexashop
           }, 500);
         });
       });
-    </script>
+    </script> -->
   </body>
 </html>
